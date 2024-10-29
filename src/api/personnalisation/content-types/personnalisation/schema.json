@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "personnalisations",
+  "info": {
+    "singularName": "personnalisation",
+    "pluralName": "personnalisations",
+    "displayName": "Personnalisation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images_accueil": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "description_accueil": {
+      "type": "text",
+      "required": true
+    },
+    "a_propos_qui_sommes_nous": {
+      "type": "text",
+      "required": true
+    },
+    "a_propos_parfum_unique": {
+      "type": "text",
+      "required": true
+    },
+    "a_propos_qualite": {
+      "type": "text",
+      "required": true
+    },
+    "image_description_accueil": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "politique_de_remboursement": {
+      "type": "blocks",
+      "required": true
+    },
+    "mentions_legales": {
+      "type": "blocks",
+      "required": true
+    },
+    "conditions_generales": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

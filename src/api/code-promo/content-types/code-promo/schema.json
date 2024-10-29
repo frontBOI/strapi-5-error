@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "code_promos",
+  "info": {
+    "singularName": "code-promo",
+    "pluralName": "code-promos",
+    "displayName": "CodePromo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "reduction": {
+      "type": "integer",
+      "required": true,
+      "max": 100,
+      "unique": true,
+      "min": 1
+    }
+  }
+}

@@ -1,36 +1,54 @@
 {
-  "name": "my-strapi-project",
-  "version": "0.1.0",
+  "name": "my-project",
   "private": true,
+  "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "build": "strapi build",
-    "deploy": "strapi deploy",
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi"
-  },
-  "dependencies": {
-    "@strapi/plugin-cloud": "5.1.1",
-    "@strapi/plugin-users-permissions": "5.1.1",
-    "@strapi/strapi": "5.1.1",
-    "better-sqlite3": "11.3.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "build": "strapi build",
+    "dev:watch": "strapi develop --watch-admin",
+    "tsc-compile": "npx tsc-files --noEmit",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
   },
   "devDependencies": {
+    "@types/got": "^9.6.12",
+    "@types/koa-bodyparser": "^4.3.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5"
   },
-  "engines": {
-    "node": ">=18.0.0 <=22.x.x",
-    "npm": ">=6.0.0"
+  "dependencies": {
+    "@frontboi/mailing": "^1.0.11",
+    "@frontboi/mondial-relay": "^1.2.18",
+    "@react-email/components": "0.0.22",
+    "@strapi/email": "5.1.1",
+    "@strapi/plugin-cloud": "5.1.1",
+    "@strapi/plugin-users-permissions": "5.1.1",
+    "@strapi/strapi": "5.1.1",
+    "better-sqlite3": "9.4.3",
+    "googleapis": "^140.0.1",
+    "got": "^11.0.0",
+    "libphonenumber-js": "^1.11.7",
+    "mysql2": "^3.10.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "stripe": "^16.2.0",
+    "styled-components": "^6.0.0",
+    "zod": "^3.23.8"
+  },
+  "author": {
+    "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "2130e3e2-3ef2-4eec-9004-ae5980ddae5e"
-  }
+    "uuid": "78d849e4-b81b-45d2-a687-26608d664f78"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }

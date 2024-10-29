@@ -1,0 +1,72 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_datas",
+  "info": {
+    "singularName": "global-data",
+    "pluralName": "global-datas",
+    "displayName": "GlobalData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tva_number": {
+      "type": "string",
+      "required": false
+    },
+    "stripe_private_key": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "stripe_publishable_key": {
+      "type": "string",
+      "required": true
+    },
+    "stripe_webhook_secret": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "mondial_relay_login_api": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "mondial_relay_password": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "gmail_oauth_refresh_token": {
+      "type": "string",
+      "private": true
+    },
+    "mondial_relay_brand_id_api": {
+      "type": "string",
+      "required": true
+    },
+    "elisa_minet_address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.address",
+      "private": true
+    },
+    "elisa_minet_phone": {
+      "type": "string",
+      "required": false,
+      "private": true
+    },
+    "tva_amount": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "is_gmail_refresh_token_invalid": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

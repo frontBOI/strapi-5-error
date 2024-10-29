@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avis_clients",
+  "info": {
+    "singularName": "avis-client",
+    "pluralName": "avis-clients",
+    "displayName": "AvisClient"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_name": {
+      "type": "string",
+      "required": true
+    },
+    "avis": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coffrets",
+  "info": {
+    "singularName": "coffret",
+    "pluralName": "coffrets",
+    "displayName": "Coffret",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "coffret"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commands",
+  "info": {
+    "singularName": "command",
+    "pluralName": "commands",
+    "displayName": "Command",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "command_status": {
+      "type": "enumeration",
+      "enum": ["En cours", "Livrée", "Annulée"],
+      "required": true,
+      "default": "En cours"
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "commands"
+    },
+    "elements": {
+      "displayName": "command-element",
+      "type": "component",
+      "repeatable": true,
+      "component": "command.command-element",
+      "required": true
+    },
+    "mondial_relay_etiquette": {
+      "type": "string"
+    },
+    "mondial_relay_command_number": {
+      "type": "string"
+    }
+  }
+}

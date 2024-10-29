@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_command_command_elements",
+  "info": {
+    "displayName": "command-element",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}

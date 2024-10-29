@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "conseils": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "ingredients": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["Parfum", "Soin du corps", "Soin des cheveux"],
+      "required": true
+    },
+    "coffret": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::coffret.coffret",
+      "inversedBy": "products"
+    },
+    "weight_in_grams": {
+      "type": "integer",
+      "required": true
+    },
+    "dermatologically_tested": {
+      "type": "boolean",
+      "default": true
+    },
+    "made_in_france": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

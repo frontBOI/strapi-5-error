@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stripe_sessions",
+  "info": {
+    "singularName": "stripe-session",
+    "pluralName": "stripe-sessions",
+    "displayName": "StripeSession",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "session_id": {
+      "type": "string",
+      "required": true
+    },
+    "elements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "command.command-element",
+      "required": true
+    },
+    "mondial_relay_parcel_id": {
+      "type": "string"
+    }
+  }
+}
